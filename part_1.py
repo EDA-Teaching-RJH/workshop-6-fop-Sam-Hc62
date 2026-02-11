@@ -3,3 +3,6 @@ print(sample_bay[0])
 x = len(sample_bay) 
 print(sample_bay[x - 1])
 print(x)
+for salts in sample_bay:
+    print(f"transmitting data for:", salts)
+
