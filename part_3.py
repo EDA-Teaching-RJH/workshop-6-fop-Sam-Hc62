@@ -11,6 +11,11 @@ def get_coordinate():
     while True:
         try:
             X = int(input("x coordinate"))
+            if -100< X <100:
+                break
+            else:
+                print("coordinate out of range")
+                continue
         except ValueError:
             print("invalid coordinate")
         else:
