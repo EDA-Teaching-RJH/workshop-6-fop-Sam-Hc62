@@ -13,11 +13,11 @@ rover_state = {"x": 0, "y": 0, "samples": 0}
 for items in command_batch:
     split_command = items.split()
     if split_command[0] == "MOVE":
-        if split_command[1].isdigit():
-            rover_state["y"] + int(split_command[1])
-            print(rover_state)
-        else:
-            print("value error")
+        try: 
+            x=int(split_command[1])
+            rover_state["y"]= rover_state["y"]+ x
+        except ValueError:
+            print("bad distance")
     elif split_command[0] == "DIG":
         rover_state["samples"] + 1
     elif split_command[0] == "TURN":
