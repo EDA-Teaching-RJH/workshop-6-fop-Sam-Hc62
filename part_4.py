@@ -5,15 +5,16 @@ while True:
         if X >45:
             print("CRITICAL TILT! HALTING.")
             print("mission terminated")
+            print("total steps taken:", len(travel_log))
             break
         else:
             travel_log.append(X)
             print("Path Stable. Moving forward.")
-            print(travel_log)
             continue
     except ValueError:
         print("sensor glitch")
     else:
+        print("total steps taken", len(travel_log))
         break
 print(travel_log)
 
